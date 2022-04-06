@@ -45,33 +45,35 @@ header {
 
 .content {
     padding: 40px;
-    h1 {
-        margin-bottom: 40px;
-    }
-}
-.shoes {
-    display: flex;
 }
 .card {
-    border: 1px solid #f3f3f3;
-    padding: 30px;
-    width: 150px;
-    border-radius: 40px;
-
+    display: flex;
+    
+    &__card {
+        border: 1px solid #f3f3f3;
+        padding: 30px;
+        width: 150px;
+        border-radius: 40px;
+        transition: box-shadow 0.2s ease-in-out, transform 0.2s ease-in-out;
+        cursor: pointer;
+        &:hover {
+            box-shadow: 0px 20px 35px rgba(0, 0, 0, 0.06);
+            transform: translateY(-5px);
+        }
+    }
     h5 {
         font-weight: 400;
         font-size: 14px;
     }
 
     &__body {
-       display: flex;
-       justify-content: space-between;
-       align-items: center;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
     &__info {
-       display: flex;
-       flex-direction: column;
-       
+        display: flex;
+        flex-direction: column;   
     }
     &__button {
         background: white;
@@ -81,6 +83,30 @@ header {
         height: 32px;
         width: 32px;
         cursor: pointer;
+    }
+    &__favorite {
+        position: absolute;
+        cursor: pointer;
+    }
+}
+
+.search__block {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  justify-content: space-between;
+  &__search {
+      border: 1px solid #f3f3f3;
+      padding: 0 15px;
+      border-radius: 10px;
+
+        input {
+            border: none;
+            padding: 11px;
+            font-size: 16px;
+            outline: none;
+            width: 200px;
+        }
     }
 }
 

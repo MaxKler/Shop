@@ -6,9 +6,12 @@ import LogoPng from './../img/logo.png'
 import CartSvg from './../img/cart.svg'
 import UserSvg from './../img/user.svg'
 import PlusSvg from './../img/plus.svg'
+import SearchSvg from './../img/search.svg'
+import UnLikedSvg from './../img/heartUnLiked.svg'
 import Shoes from './../img/shoes/shoes1.png'
 
 const Main = () => {
+  
   return (
     <div className={classes.wrapper}>
       <header > 
@@ -30,9 +33,19 @@ const Main = () => {
         </ul>
       </header> 
       <div className={classes.content}>
-        <h1>Все кроссовки</h1>
-        <div className={classes.shoes}>
-          <div className={classes.card}>
+        <div className={classes.search__block}>
+          <h1>Все кроссовки</h1>
+          <div className={classes.search__block__search}>
+            <img src={SearchSvg} alt='' />
+            <input placeholder='Поиск...' /> 
+          </div>
+        </div>
+        
+        <div className={classes.card}>
+          <div className={classes.card__card}>
+            <div className={classes.card__favorite}>
+               <img src={UnLikedSvg} alt='' />
+            </div>
             <img width={133} height={112} src={Shoes} alt='' />
             <h5>Мужские кроссовки Nike Blazer Mid Suede</h5>
             <div className={classes.card__body}>
