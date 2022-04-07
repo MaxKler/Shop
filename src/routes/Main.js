@@ -2,6 +2,7 @@ import React from 'react'
 
 import classes from './../../src/style/style.module.scss'
 
+import cancelSvg from './../img/cancel.svg'
 import LogoPng from './../img/logo.png'
 import CartSvg from './../img/cart.svg'
 import UserSvg from './../img/user.svg'
@@ -14,6 +15,20 @@ const Main = () => {
   
   return (
     <div className={classes.wrapper}>
+      <div className={classes.overlay}>
+        <div className={classes.drawer}>
+          <h2>Корзина</h2>
+
+          <div className={classes.cartItem}>
+             <img className={classes.cartItem__shoes} width={70} height={70} src={Shoes} alt='' />
+             <div className={classes.cartItem__info}>
+               <p>Мужские кроссовки Nike Blazer Mid Suede</p>
+               <b>5999 грн.</b>
+             </div>
+             <img className={classes.cartItem__cancelBtn} src={cancelSvg} alt='' />
+          </div>
+        </div>
+      </div>
       <header > 
         <div className={classes.headerLeft}>
           <img width={40} height={40} src={LogoPng} alt='' />
