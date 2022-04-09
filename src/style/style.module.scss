@@ -119,16 +119,78 @@ header {
 }
 
 .drawer {
+   display: flex;
+    flex-direction: column;
     position: absolute;
     width: 385px;
     height: 100%;
     right: 0;
     background: #fff;
     box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    &__items {
+       overflow-y: auto;
+       min-height: 500px;
+    }
     h2 {
-        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    &__dawn {
+        ul {
+            padding: 0;
+            li {
+                display: flex;
+                align-items: flex-end;
+                margin-bottom: 20px;
+            }
+            div {
+                position: relative;
+                top: -4px;
+                margin: 0 7px;
+                flex: 1;
+                height: 1px;
+                border-bottom: 1px dashed #dfdfdf;
+            }
+        }
+        .greenBtn {
+            position: relative;
+            &:hover {
+                img {
+                    transform: translateX(5px);
+                }
+            }
+
+            img {
+                position: absolute;
+                right: 30px;
+                transition: transform 0.2s ease-in-out;
+            }
+        }
+    }
+}
+.greenBtn {
+    width: 100%;
+    background: #9DD558;
+    border-radius: 18px;
+    height: 55px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    color: white;
+    
+    font-size: 16px;
+    font-weight: 500;
+    &:hover {
+        background: lighten( #9DD558, 5%);
+    }
+    &:active {
+        background: darken( #9DD558, 5%);
     }
 }
 .cartItem {
@@ -138,6 +200,7 @@ header {
     border-radius: 20px;
     overflow: hidden;
     padding: 10px;
+    margin-bottom: 15px;
     &__shoes {
         margin-right: 20px;
     }
